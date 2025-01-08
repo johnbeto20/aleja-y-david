@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif; /* Cambia la fuente a una más similar si es necesario */
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Fondo general de la página */
+    color: #333; /* Color de texto general */
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Georgia', serif; /* Fuente para los encabezados */
+    color: #d9b38c; /* Color dorado oscuro para los títulos */
+    margin-bottom: 20px;
+}
+
+.section-dark {
+    background-color: #0a0a23; /* Fondo oscuro para secciones específicas */
+    color: #fff;
+    padding: 60px 0;
+}
+
+.btn-outline-secondary {
+    border-color: #d9b38c;
+    color: #d9b38c;
+    transition: background-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #d9b38c;
+    color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-content {
+    background-color: #fff8f0; /* Color de fondo para los modales */
+}
+
+.btn {
+    border-radius: 25px; /* Botones con bordes redondeados */
+    padding: 10px 20px;
+}
+
+#countdown div {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.img-thumbnail {
+    border: none;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .row > .col-md-6 {
+        padding: 20px;
+    }
+}

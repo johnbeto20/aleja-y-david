@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save The Date</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Hero Image Section -->
+<section class="text-center bg-dark text-white py-5">
+    <div class="container">
+        <h1>Chesy & Guapurita</h1>
+        <h2>SAVE THE DATE</h2>
+        <p>NOS CASAMOS!</p>
+    </div>
+</section>
+
+<!-- Date Section -->
+<section class="text-center py-5">
+    <div class="container">
+        <h3>Diciembre</h3>
+        <button class="btn btn-outline-secondary mt-3">Ver Detalles</button>
+    </div>
+</section>
+
+<!-- Event Details Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h4>CEREMONIA</h4>
+                <p>12:00 p.m. <br> Lugar: Parroquia Nuestra Señora</p>
+                <button class="btn btn-outline-secondary">Ver Mapa</button>
+            </div>
+            <div class="col-md-6 text-center">
+                <h4>CELEBRACIÓN</h4>
+                <p>4:00 p.m. <br> Lugar: Salón de eventos</p>
+                <button class="btn btn-outline-secondary">Ver Mapa</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dress Code Section -->
+<section class="text-center py-5">
+    <div class="container">
+        <h4>Dress Code</h4>
+        <p>Formal</p>
+    </div>
+</section>
+
+<!-- Details Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h5>Tips y Notas</h5>
+                <p>Información adicional para tener en cuenta</p>
+                <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#tipsModal">Ver más</button>
+            </div>
+            <div class="col-md-6 text-center">
+                <h5>Obsequios</h5>
+                <p>Listado de obsequios disponibles</p>
+                <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#giftsModal">Ver más</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="text-center py-5">
+    <div class="container">
+        <h4>Momentos Inolvidables</h4>
+        <div class="row">
+            <!-- Gallery Items -->
+            <div class="col-md-4">
+                <div class="img-thumbnail">
+                    <a href="#" data-toggle="modal" data-target="#imageModal"><img src="https://picsum.photos/300/200?random=1" alt="Imagen 1" class="img-fluid" onclick="openModal(this.src)"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-thumbnail">
+                    <a href="#" data-toggle="modal" data-target="#imageModal"><img src="https://picsum.photos/300/200?random=2" alt="Imagen 2" class="img-fluid" onclick="openModal(this.src)"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-thumbnail">
+                    <a href="#" data-toggle="modal" data-target="#imageModal"><img src="https://picsum.photos/300/200?random=3" alt="Imagen 3" class="img-fluid" onclick="openModal(this.src)"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Countdown Section -->
+<section class="text-center py-5 bg-dark text-white">
+    <div class="container">
+        <h4>Cuenta Regresiva</h4>
+        <div id="countdown">
+            <div class="d-flex justify-content-center">
+                <div class="px-3">
+                    <h5 id="days">00</h5>
+                    <p>Días</p>
+                </div>
+                <div class="px-3">
+                    <h5 id="hours">00</h5>
+                    <p>Horas</p>
+                </div>
+                <div class="px-3">
+                    <h5 id="minutes">00</h5>
+                    <p>Minutos</p>
+                </div>
+                <div class="px-3">
+                    <h5 id="seconds">00</h5>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<!-- Tips Modal -->
+<div class="modal fade" id="tipsModal" tabindex="-1" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tipsModalLabel">Tips y Notas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Gifts Modal -->
+<div class="modal fade" id="giftsModal" tabindex="-1" aria-labelledby="giftsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="giftsModalLabel">Obsequios</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img id="expandedImage" src="" alt="Imagen expandida" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Countdown Script -->
+<script>
+    // Configuración de la cuenta regresiva
+    var countdownDate = new Date("Dec 28, 2025 00:00:00").getTime();
+    var countdownFunction = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countdownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "¡Evento Comenzado!";
+        }
+    }, 1000);
+
+    function openModal(src) {
+        document.getElementById('expandedImage').src = src;
+        $('#imageModal').modal('show');
+    }
+</script>
+
+</body>
+</html>
