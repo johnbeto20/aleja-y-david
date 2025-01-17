@@ -7,9 +7,27 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="no-scroll">
+
+<div id="welcomeContainer">
+    <div class="text-center container-sobre">
+        <div class="sobre">
+            <img src="img/sobre-1.svg" alt="" class="carta-1">
+            <div class="hoja">
+                <h1>Hola</h1>
+                <p>Después de tanto tiempo hemos dado el <b>"si"</b> definitivo</p>
+                <p>Nos gustaría contar con ustedes para celebrar este día tan especial.</p>
+            </div>
+            <img src="img/sobre-2.svg" alt="" class="carta-2">
+        </div>
+        <button class="btn btn-primary btn-open" onclick="openContent()">Abrir</button>
+    </div>
+</div>
 
 <!-- Hero Image Section -->
+<section class="image-pareja">
+    <img src="img/banner-home.jpg" alt="Aleja y david">
+</section>
 <section class="text-center bg-dark text-white py-5">
     <div class="container">
         <h1>Chesy & Guapurita</h1>
@@ -168,36 +186,21 @@
     </div>
 </div>
 
+<button id="toggleMusic" class="btn">
+    <img id="musicIcon" src="img/play.png" alt="Reproducir Música">
+</button>
+
+<audio id="backgroundMusic" loop>
+    <source src="audio/sound-loop.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- Countdown Script -->
-<script>
-    // Configuración de la cuenta regresiva
-    var countdownDate = new Date("Dec 28, 2025 00:00:00").getTime();
-    var countdownFunction = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countdownDate - now;
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
-        if (distance < 0) {
-            clearInterval(countdownFunction);
-            document.getElementById("countdown").innerHTML = "¡Evento Comenzado!";
-        }
-    }, 1000);
-
-    function openModal(src) {
-        document.getElementById('expandedImage').src = src;
-        $('#imageModal').modal('show');
-    }
-</script>
+ <script src="js/main.js"></script>
 
 </body>
 </html>
