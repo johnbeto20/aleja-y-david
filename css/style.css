@@ -4,12 +4,14 @@
     --background-color-body: #f5f5f5;
     --text-color-body: #333;
     --color-headings-fond: #f0e2d4;
-    --color-headings: #d9b38c;
-    --color-headings-dark: #9a7148;
+    --color-headings: #f6d159;
+    --color-headings-dark: #d6ad24;
+    --color-btn-secondary: #0f3858;
+    --color-btn-secondary-dark: #052338;
     --background-color-dark: #0a0a23;
     --text-color-dark: #fff;
     --padding-section: 60px 0;
-    --border-color-btn: #d9b38c;
+    --border-color-btn: #0f3858;
     --bg-color-btn-dark: #0f3858;
     --bg-color-btn-dark-hover: #052338;
     --transition-btn: background-color 0.3s ease;
@@ -34,6 +36,29 @@ body {
     color: var(--text-color-body);
 }
 
+section {
+    background: var(--background-color-body);
+}
+
+.container {
+    width: 90%;
+}
+
+.line-data {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.line-data:after, .line-data:before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: var(--text-color-dark);
+}
+
 .no-scroll {
     overflow: hidden;
 }
@@ -42,13 +67,16 @@ body {
     width: 100%;
     overflow: hidden;
     height: 500px;
+    background: transparent;
 }
 
 .image-pareja img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 500px;
     display: block;
+    position: fixed;
+    z-index:-1;
 }
 
 .container-sobre {
@@ -61,6 +89,18 @@ h1, h2, h3, h4, h5 {
     font-family: var(--font-headings);
     color: var(--color-headings);
     margin-bottom: var(--margin-bottom-headings);
+}
+
+.subtitle {
+    font-size: 3rem;
+}
+
+.color-text-title {
+    color: var(--bg-color-btn-dark)
+}
+
+.color-text-normal {
+    color: var(--text-color-body);
 }
 
 .sobre {
@@ -120,6 +160,17 @@ h1, h2, h3, h4, h5 {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
     padding: var(--padding-section);
+}
+
+.btn-secondary {
+    border-color: var(--color-btn-secondary);
+    background: var(--color-btn-secondary);
+    color: var(--text-color-dark);
+    transition: var(--transition-btn);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-btn-secondary-dark);
 }
 
 .btn-outline-secondary {

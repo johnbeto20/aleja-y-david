@@ -18,7 +18,7 @@ function openContent() {
     }, 500); // Debe coincidir con la duración de la animación en CSS
 }
 // Configuración de la cuenta regresiva
-var countdownDate = new Date("Dec 28, 2025 00:00:00").getTime();
+var countdownDate = new Date("Aug 09, 2025 00:00:00").getTime();
 var countdownFunction = setInterval(function() {
     var now = new Date().getTime();
     var distance = countdownDate - now;
