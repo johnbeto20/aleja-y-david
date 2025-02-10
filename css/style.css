@@ -1,8 +1,9 @@
 :root {
-    --font-body: 'Arial', sans-serif;
-    --font-headings: 'Georgia', serif;
+    --font-body: "Cardo", serif;
+    --font-headings: "Corinthia", serif;
     --background-color-body: #f5f5f5;
     --text-color-body: #333;
+    --text-color-mute: #6e6e6e;
     --color-headings-fond: #f0e2d4;
     --color-headings: #f6d159;
     --color-headings-dark: #d6ad24;
@@ -36,6 +37,11 @@ body {
     color: var(--text-color-body);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    font-style: normal;
+}
+
 section {
     background: var(--background-color-body);
 }
@@ -57,6 +63,13 @@ section {
     width: 100%;
     height: 1px;
     background: var(--text-color-dark);
+    opacity: 0.6;
+}
+
+.gradient-text-headings {
+  background: -webkit-radial-gradient(var(--color-headings-fond), var(--color-headings));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .no-scroll {
@@ -83,6 +96,12 @@ section {
     width: 300px;
     max-width: 300px;
     height: 420px;
+    filter: drop-shadow(0 0 150px var(--bg-color-btn-dark-hover));
+}
+
+.separator-forest {
+    height: 30px;
+    background: url(../img/fond-line.svg);
 }
 
 h1, h2, h3, h4, h5 {
@@ -91,16 +110,16 @@ h1, h2, h3, h4, h5 {
     margin-bottom: var(--margin-bottom-headings);
 }
 
-.subtitle {
-    font-size: 3rem;
-}
-
 .color-text-title {
     color: var(--bg-color-btn-dark)
 }
 
 .color-text-normal {
     color: var(--text-color-body);
+}
+
+.bg-dark-blue {
+    background: var(--bg-color-btn-dark)
 }
 
 .sobre {
@@ -137,8 +156,13 @@ h1, h2, h3, h4, h5 {
     z-index: 2;
     background-color: var(--background-color-body);
     padding: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sobre .hoja h1 {
+    font-size: 4em;
+    margin: 0;
 }
 
 .btn-open {
@@ -149,11 +173,40 @@ h1, h2, h3, h4, h5 {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: auto;
     z-index: 4;
     border-radius: 50% !important;
+    text-align: center;
+}
+
+.btn-open:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-btn-secondary);
+    border-radius: 50%;
+    z-index: -1;
+    animation: start-btn infinite 1s ease-in;
+}
+
+@keyframes start-btn {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
 }
 
 .section-dark {
@@ -211,6 +264,28 @@ img {
 .btn {
     border-radius: var(--border-radius-btn);
     padding: var(--padding-btn);
+}
+
+.arrow-down {
+    width: 20px;
+    height: 20px;
+    border-left: solid 1px var(--background-color-body);
+    border-bottom: solid 1px var(--background-color-body);
+    transform: rotate(-45deg);
+    margin: 0 auto;
+}
+
+.content-arrow {
+    animation: scroll-down alternate ease-in 1s infinite;
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
 }
 
 #countdown div {
@@ -279,4 +354,68 @@ img {
     50% {
         filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1));
     }
+}
+
+.data-day {
+    appearance: none;
+    text-align: center;
+    width: 100%;
+    border: 0;
+}
+
+.data-day tr th {
+    font-weight: bold;
+    color: var(--text-color-mute);
+    font-size: 1.15em;
+}
+
+.data-day tr td {
+    font-size: 1.5em;
+    opacity: 0.2;
+}
+
+.data-day tr td:nth-child(4) {
+    opacity: 1;
+    color: var(--color-btn-secondary);
+    border-top: solid 1px var(--color-btn-secondary);
+    border-bottom: solid 1px var(--color-btn-secondary);
+    font-weight: bold;
+}
+
+.display-1  {
+    font-size: calc(2.625rem + 4.5vw);
+}
+
+.display-2 {
+    font-size: calc(2.575rem + 3.9vw);
+}
+
+.display-3 {
+    font-size: calc(2.525rem + 3.3vw);
+}
+
+.display-4 {
+    font-size: calc(2.475rem + 2.7vw);
+}
+
+.bg-secondary {
+    background-color: var(--color-btn-secondary) !important;
+}
+
+.bg-secondary:not(.cont-return) .color-text-title {
+    background: -webkit-radial-gradient(var(--color-headings-fond), var(--color-headings));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-secondary h4 {
+    color: var(--color-headings-dark);
+}
+
+.border-golden {
+    border: var(--color-headings-dark) solid 1px;
+}
+
+.radius-card-weddins {
+    border-radius: 50vw 50vw 30px 30px ;
 }

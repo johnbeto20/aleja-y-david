@@ -6,6 +6,10 @@
     <title>Save The Date</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Euphoria+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Corinthia:wght@400;700&family=Euphoria+Script&display=swap" rel="stylesheet">
 </head>
 <body class="no-scroll">
 
@@ -20,7 +24,7 @@
             </div>
             <img src="img/sobre-2.svg" alt="" class="carta-2">
         </div>
-        <button class="btn btn-primary btn-open" onclick="openContent()">Abrir</button>
+        <button class="btn btn-primary btn-open fs-3 fw-bold" onclick="openContent()">Abrir</button>
     </div>
 </div>
 
@@ -28,40 +32,76 @@
 <section class="image-pareja">
     <img src="img/banner-home.jpg" alt="Aleja y david">
 </section>
-<section class="text-center bg-dark text-white py-5">
+<section class="text-center bg-dark-blue text-white py-5">
     <div class="container">
-        <span class="line-data">09.08.2025</span>
-        <h1 class="text-white my-2">Alejandra & David</h1>
-        <span class="border-top border-light w-50 d-inline-block"></span>
-        <h2 class="subtitle my-2">PREPARATE</h2>
-        <span class="border-top border-light w-50 d-inline-block"></span>
-        <p class="fs-3 mt-2">¡NOS CASAMOS!</p>
+        <span class="line-data fs-3">09.08.2025</span>
+        <h1 class="text-white my-2 display-1">Alejandra & David</h1>
+        <span class="border-top border-light w-25 d-inline-block"></span>
+        <p class="subtitle my-2 display-4 gradient-text-headings">PREPARATE</p>
+        <span class="border-top border-light w-25 d-inline-block"></span>
+        <p class="fs-3 mt-2"><b>¡NOS CASAMOS!</b></p>
+        <div class="content-arrow">
+            <div class="arrow-down"></div>
+        </div>
     </div>
 </section>
 
 <!-- Date Section -->
 <section class="text-center py-5">
+    <div class="separator-forest"></div>
     <div class="container">
-        <h3 class="color-text-title display-4 fw-bold">Agosto</h3>
-        <button class="btn btn-secondary mt-3">Guardar en el calendario</button>
+        <h3 class="color-text-title display-1 fw-bold mt-3 mb-5">Agosto</h3>
+        <table class="data-day">
+            <tr>
+                <th>Mie</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sab</th>
+                <th>Dom</th>
+                <th>Lun</th>
+                <th>Mar</th>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </table>
+        <a class="btn btn-secondary my-5" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Compromiso+de+Aleja+y+David&dates=20250809T150000/20250809T160000&location=Cl.+35+%2373a-45,+Laureles+-+Estadio,+Medell%C3%ADn,+Laureles,+Medell%C3%ADn,+Antioquia" target="_blank">Guardar en el calendario</a>
     </div>
+    <div class="separator-forest"></div>
 </section>
 
 <!-- Event Details Section -->
-<section class="py-5">
+<section class="py-5 bg-secondary">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <h4 class="color-text-title">CEREMONIA</h4>
-                <p>03:00 p.m. <br> Lugar: Parroquia santa Teresita del niño Jesús</p>
-                <p>Cl. 35 #73a-45, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia</p>
-                <button class="btn btn-outline-secondary">Ver Mapa</button>
+        <div class="row mb-2">
+            <div class="col-12">
+                <span class="line-data fs-3 text-white">09.08.2025</span>
             </div>
-            <div class="col-md-6 text-center">
-                <h4 class="color-text-title">CELEBRACIÓN</h4>
-                <p>4:30 p.m. <br> Lugar: Banquetes san Joaquín sede laureles</p>
-                <p>Cra. 76 #32EE 17, Medellín, Belén, Medellín, Antioquia</p>
-                <button class="btn btn-outline-secondary">Ver Mapa</button>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center my-3 border-golden p-4">
+               <div class="bg-white py-4 radius-card-weddins">
+                    <img src="img/ceremonia.svg" alt="" class="w-75">
+                    <h4 class="display-1 border-top border-bottom">Ceremonia</h4>
+                    <p class="fs-5 fw-bold px-3 text-secondary">03:00 p.m. <br> Lugar: Parroquia santa Teresita del niño Jesús</p>
+                    <p class="fs-6 px-3">Cl. 35 #73a-45, Laureles - Estadio, Medellín, Laureles, Medellín, Antioquia</p>
+                    <a class="btn btn-outline-secondary" href="https://maps.app.goo.gl/T62xsevRX7Siqrju5" target="_blank">Conoce la ubicación</a>
+               </div>
+            </div>
+            <div class="col-md-6 text-center my-3 border-golden p-4">
+                <div class="bg-white py-4 radius-card-weddins">
+                    <img src="img/celebration.svg" alt="" class="w-50">
+                    <h4 class="display-1 border-top border-bottom">Celebración</h4>
+                    <p class="fs-5 fw-bold px-3 text-secondary">4:30 p.m. <br> Lugar: Banquetes san Joaquín sede laureles</p>
+                    <p class="fs-6 px-3">Cra. 76 #32EE 17, Medellín, Belén, Medellín, Antioquia</p>
+                    <a class="btn btn-outline-secondary" href="https://maps.app.goo.gl/DtZv17RYTxXtNj1Z7" target="_blank">Conoce la ubicación</a>
+                </div>
             </div>
         </div>
     </div>
@@ -96,34 +136,37 @@
     <div class="container">
         <h4 class="color-text-title">Momentos Inolvidables</h4>
         <p>Revise los momentos de nuestra boda y celebración de amor.</p>
-        <button class="btn btn-outline-secondary">Ir a las memorias</button>
+        <a class="btn btn-outline-secondary" href="https://drive.google.com/drive/folders/1xQV3SK3GTR-_UqiYqxIadecuHv-_o6cc?usp=sharing">Ir a las memorias</a>
     </div>
 </section>
 
 <!-- Countdown Section -->
-<section class="text-center py-5 bg-dark text-white">
+<section class="text-center py-5 bg-secondary cont-return">
     <div class="container">
-        <h4>Cuenta Regresiva</h4>
+        <h4 class="gradient-text-headings display-1">Alejandra & David</h4>
         <div id="countdown">
             <div class="d-flex justify-content-center">
-                <div class="px-3 bg-white rounded-3 pt-3 shadow">
-                    <h5 id="days" class="color-text-title fw-bold fs-1">00</h5>
-                    <p class="color-text-normal fs-5">Días</p>
+                <div class="px-2 bg-white rounded-3 pt-3 shadow">
+                    <p id="days" class="color-text-title fw-bold display-4 m-0">00</p>
+                    <p class="color-text-normal fs-6 fw-bold">Días</p>
                 </div>
-                <div class="px-3 bg-white rounded-3 pt-3 shadow">
-                    <h5 id="hours" class="color-text-title fw-bold fs-1">00</h5>
-                    <p class="color-text-normal fs-5">Horas</p>
+                <div class="px-2 bg-white rounded-3 pt-3 shadow">
+                    <p id="hours" class="color-text-title fw-bold display-4 m-0">00</p>
+                    <p class="color-text-normal fs-6 fw-bold">Horas</p>
                 </div>
-                <div class="px-3 bg-white rounded-3 pt-3 shadow">
-                    <h5 id="minutes" class="color-text-title fw-bold fs-1">00</h5>
-                    <p  class="color-text-normal fs-5">Minutos</p>
+                <div class="px-2 bg-white rounded-3 pt-3 shadow">
+                    <p id="minutes" class="color-text-title fw-bold display-4 m-0">00</p>
+                    <p  class="color-text-normal fs-6 fw-bold">Minutos</p>
                 </div>
-                <div class="px-3 bg-white rounded-3 pt-3 shadow">
-                    <h5 id="seconds" class="color-text-title fw-bold fs-1">00</h5>
-                    <p  class="color-text-normal fs-5">Segundos</p>
+                <div class="px-2 bg-white rounded-3 pt-3 shadow">
+                    <p id="seconds" class="color-text-title fw-bold display-4 m-0">00</p>
+                    <p  class="color-text-normal fs-6 fw-bold">Segundos</p>
                 </div>
             </div>
         </div>
+        <span class="border-top border-light w-25 d-inline-block mb-3 mt-3"></span>
+        <p class="gradient-text-headings display-5">LOS ESPERAMOS</p>
+        <span class="border-top border-light w-25 d-inline-block"></span>
     </div>
 </section>
 
