@@ -2,21 +2,17 @@
     --font-body: "Cardo", serif;
     --font-headings: "Corinthia", serif;
     --background-color-body: #f5f5f5;
+    --text-color-black: #111111;
     --text-color-body: #333;
     --text-color-mute: #6e6e6e;
     --color-headings-fond: #f0e2d4;
     --color-headings: #f6d159;
     --color-headings-dark: #d6ad24;
+    --color-btn-secondary-light: #96c1e2;
     --color-btn-secondary: #0f3858;
-    --color-btn-secondary-dark: #052338;
-    --background-color-dark: #0a0a23;
+    --background-color-dark: #031b2e;
     --text-color-dark: #fff;
     --padding-section: 60px 0;
-    --border-color-btn: #0f3858;
-    --bg-color-btn-dark: #0f3858;
-    --bg-color-btn-dark-hover: #052338;
-    --transition-btn: background-color 0.3s ease;
-    --background-color-modal: #fff8f0;
     --border-radius-btn: 25px;
     --padding-btn: 10px 20px;
     --font-size-countdown: 24px;
@@ -28,6 +24,7 @@
     --margin-bottom-img-thumbnail: 20px;
     --padding-row: 20px;
 }
+
 
 body {
     font-family: var(--font-body);
@@ -96,7 +93,7 @@ section {
     width: 300px;
     max-width: 300px;
     height: 420px;
-    filter: drop-shadow(0 0 150px var(--bg-color-btn-dark-hover));
+    filter: drop-shadow(0 0 150px var(--background-color-dark));
 }
 
 .separator-forest {
@@ -111,7 +108,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .color-text-title {
-    color: var(--bg-color-btn-dark)
+    color: var(--color-btn-secondary);
 }
 
 .color-text-normal {
@@ -119,7 +116,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .bg-dark-blue {
-    background: var(--bg-color-btn-dark)
+    background: var(--color-btn-secondary);
 }
 
 .sobre {
@@ -162,11 +159,10 @@ h1, h2, h3, h4, h5 {
 
 .sobre .hoja h1 {
     font-size: 4em;
-    margin: 0;
 }
 
 .btn-open {
-    background-color: var(--bg-color-btn-dark);
+    background-color: var(--color-btn-secondary);
     color: var(--background-color-body);
     position: absolute;
     top: 220px;
@@ -227,13 +223,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-outline-secondary {
-    border-color: var(--border-color-btn);
-    color: var(--border-color-btn);
+    border-color: var(--color-btn-secondary);
+    color: var(--color-btn-secondary);
     transition: var(--transition-btn);
 }
 
 .btn-outline-secondary:hover {
-    background-color: var(--border-color-btn);
+    background-color: var(--color-btn-secondary);
     color: var(--text-color-dark);
 }
 
@@ -248,7 +244,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .btn-primary:hover {
-    background: var(--bg-color-btn-dark-hover);
+    background: var(--background-color-dark);
 }
 
 img {
@@ -336,7 +332,6 @@ img {
     opacity: 0;
 }
 
-
 .blinking {
     animation: blink 2s infinite;
 }
@@ -404,8 +399,8 @@ img {
 
 .bg-secondary:not(.cont-return) .color-text-title {
     background: -webkit-radial-gradient(var(--color-headings-fond), var(--color-headings));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .bg-secondary h4 {
@@ -416,6 +411,31 @@ img {
     border: var(--color-headings-dark) solid 1px;
 }
 
+.color-golden {
+    color: var(--color-headings-dark);
+}
+
 .radius-card-weddins {
-    border-radius: 50vw 50vw 30px 30px ;
+    border-radius: 50vw 50vw 30px 30px;
+}
+
+.palet-colors {
+    width: 40px;
+    height: 40px;
+}
+
+.palet-colors.color-1 {
+    background-color: var(--text-color-black);
+}
+
+.palet-colors.color-2 {
+    background-color: var(--color-btn-secondary);
+}
+
+.palet-colors.color-3 {
+    background-color: var(--text-color-mute);
+}
+
+.palet-colors.color-4 {
+    background-color: var(--color-btn-secondary-light);
 }
