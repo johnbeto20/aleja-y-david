@@ -46,6 +46,14 @@ section {
     background: var(--background-color-body);
 }
 
+.line-title {
+    line-height: 0.9em;
+}
+
+.line-title-minus {
+    transform: translate(0px, -14px);
+}
+
 .container {
     width: 90%;
 }
@@ -399,7 +407,7 @@ img {
 }
 
 .display-4 {
-    font-size: calc(2.475rem + 2.7vw);
+    font-size: calc(2rem + 2.7vw);
 }
 
 .bg-secondary {
