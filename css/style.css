@@ -7,7 +7,7 @@
     --text-color-mute: #6e6e6e;
     --color-headings-fond: #f0e2d4;
     --color-headings: #f6d159;
-    --color-headings-dark: #d6ad24;
+    --color-headings-dark: #bd9365;
     --color-btn-secondary-light: #96c1e2;
     --color-btn-secondary: #0f3858;
     --background-color-dark: #031b2e;
@@ -27,6 +27,7 @@
 
 html {
     scroll-behavior: smooth;
+    transition: scroll ease-in 2s;
 }
 
 body {
@@ -35,6 +36,8 @@ body {
     padding: 0;
     background-color: var(--background-color-body);
     color: var(--text-color-body);
+    scroll-behavior: smooth;
+    transition: scroll ease-in 2s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -87,7 +90,7 @@ section {
 .image-pareja {
     width: 100%;
     overflow: hidden;
-    height: 85vh;
+    height: 63vh;
     background: transparent;
 }
 
@@ -96,7 +99,6 @@ section {
     width: 100%;
     height: 100%;
     display: block;
-    position: fixed;
     z-index:-1;
 }
 
@@ -455,4 +457,8 @@ img {
 
 .palet-colors.color-4 {
     background-color: var(--color-btn-secondary-light);
+}
+
+.radius-card-weddings {
+    border-radius: 50vw 50vw 30px 30px ;
 }
